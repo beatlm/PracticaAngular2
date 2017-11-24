@@ -1,0 +1,40 @@
+
+img{
+    width: auto !important;
+    height: 150px !important;
+}
+h1{
+font-family: Courier New, Courier, monospace;
+padding-top: 10px;}
+body{
+    background-color: steelblue;
+}
+div.main{
+    margin-top: -20px;
+    margin-left: -8px;
+    margin-right: -8px;
+    color: white;
+    text-align:center;
+    background-color: steelblue;}
+.menu{
+    text-align:left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color:  rgb(53, 99, 129);
+    margin-top: -20px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+div.menu > a{
+    color:whitesmoke;
+    font-weight: bold;
+    text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+div.menu > a.active{
+    color:pink;
+    font-weight: bolder;
+
+}
