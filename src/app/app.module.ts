@@ -2,23 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CursosComponent } from './cursos/cursos.component';
-import { ListadoComponent } from './listado/listado.component';
-import { CrearComponent } from './crear/crear.component';
+import { CourseComponent } from './course/course.component';
+import { ListComponent } from './list/list.component';
+import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 const appRoutes: Routes = [ 
-  {path: 'add-curso', component: CrearComponent}, 
-  {path: 'cursos', component: ListadoComponent}
+  {path: 'add-course', component: CreateComponent}, 
+  {path: 'courses', component: ListComponent},
+  {path: 'detail', component: CourseDetailComponent}
  ]; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CursosComponent,
-    ListadoComponent,
-    CrearComponent
+    CourseComponent,
+    ListComponent,
+    CreateComponent,
+    CourseDetailComponent
   ],
   imports: [
     BrowserModule,

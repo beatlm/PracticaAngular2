@@ -7,10 +7,12 @@
  </div>
 
  <div class="menu">
- <a [routerLink]="['cursos']" routerLinkActive="active">Cursos</a>
- <a [routerLink]="['add-curso']" routerLinkActive="active">Crear Curso</a>
+ <a [routerLink]="['courses']" routerLinkActive="active">Mis cursos</a>
+ <a [routerLink]="['add-course']" routerLinkActive="active">Crear curso</a>
+ <a [routerLink]="['detail']" routerLinkActive="active">Detalle</a>
 </div>
- <router-outlet class="content"></router-outlet>
+
+ <router-outlet></router-outlet>
  
 
 

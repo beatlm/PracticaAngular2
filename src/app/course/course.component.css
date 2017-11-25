@@ -1,0 +1,20 @@
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#ec6511;
+    font-weight: normal;
+    font-size: 1em;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-weight: normal;
+    font-size: 0.8em;
+
+}
+div{
+    border: 1px darkgray solid;
+    margin-top: 12px;
+    padding-left: 1em;
+    padding-right: 20em;
+
+}

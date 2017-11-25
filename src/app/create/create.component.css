@@ -1,0 +1,31 @@
+form{
+    padding-top: 2em;
+}
+label{
+    font-size: medium;
+    margin-left: 1em;
+    margin-top: 1em;
+    font-weight: normal;
+    color:#615e5e;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+input,textarea{
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+    border:1px solid lightgray;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.button{
+    width: 10em;
+    height:2em;
+    font-size: medium;
+    color: white;
+    background-color: rgb(53, 99, 129);
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 5em;
+}
+.range{
+    width: 28em;
+}

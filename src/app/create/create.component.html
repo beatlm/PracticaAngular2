@@ -1,0 +1,22 @@
+
+
+<form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
+    <label>Nombre:</label>
+    <br/>
+    <input type="text" size="50" name="nombre" [(ngModel)]="nombreField" required maxlength="50"/>
+    <br/>
+    <label>Descripción:</label>
+    <br/>
+    <textarea cols="48" rows="4" size="150" name="descripcion" [(ngModel)]="descripcionField" required maxlength="150">
+    </textarea>
+    <br/>
+    <label>Valoración:</label>
+    <br/>
+    <input class="range" type="range" name="valoracion" [(ngModel)]="valoracionField" required min="0" max="5"
+    />
+    <label>{{valoracionField}}</label>
+    <br/>
+    <input  class="button" type="submit" value="Enviar" />
+  </form>
+  
+
