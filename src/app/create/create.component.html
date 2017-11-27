@@ -3,18 +3,25 @@
 <form #formulario="ngForm" (ngSubmit)="onSubmit(formulario)">
     <label>Nombre:</label>
     <br/>
-    <input type="text" size="50" name="nombre" [(ngModel)]="nombreField" required maxlength="50"/>
+    <input type="text" size="50" name="nombre" [(ngModel)]="nameField" required maxlength="50"/>
     <br/>
     <label>Descripción:</label>
     <br/>
     <textarea cols="48" rows="4" size="150" name="descripcion" [(ngModel)]="descripcionField" required maxlength="150">
     </textarea>
     <br/>
-    <label>Valoración:</label>
+    <label>Alumnos máximo:</label>
     <br/>
-    <input class="range" type="range" name="valoracion" [(ngModel)]="valoracionField" required min="0" max="5"
-    />
-    <label>{{valoracionField}}</label>
+    <input type="number" size="5" name="nombre" [(ngModel)]="maxAlumnosField" required maxlength="50"/>
+    <br/>
+    <label>Precio:</label>
+    <br/>
+    <input type="text" size="50" name="nombre" [(ngModel)]="precioField" required maxlength="50"/>
+    <br/>
+    <label>Plazas disponibles:</label>
+    <br/>
+    <input type="number" size="50" name="nombre" [(ngModel)]="plazasField" required maxlength="50"/>
+
     <br/>
     <input  class="button" type="submit" value="Enviar" />
   </form>

@@ -1,3 +1,6 @@
-<p>
-  course-detail works!
-</p>
+<router-outlet></router-outlet>
+<div> 
+    <a [routerLink]="['detail']" routerLinkActive="active">Detalle</a>
+  <h3>{{course.name}}</h3>
+  <p>{{course.descripcion}}</p>
+</div>

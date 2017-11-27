@@ -8,11 +8,14 @@ import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import {RouterModule, Routes} from '@angular/router';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import{CoursesServiceService} from'./courses-service.service';
+import {HttpModule, Http} from '@angular/http';
+
 
 const appRoutes: Routes = [ 
   {path: 'add-course', component: CreateComponent}, 
   {path: 'courses', component: ListComponent},
-  {path: 'detail', component: CourseDetailComponent}
+  {path: 'courses/detail', component: CourseDetailComponent}
  ]; 
 
 @NgModule({
@@ -26,9 +29,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule
   ],
-  providers: [],
+  providers: [CoursesServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
