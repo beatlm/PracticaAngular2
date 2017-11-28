@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CoursesServiceService} from '../courses-service.service';
-import {Course} from '../course';
+import { CoursesServiceService } from '../courses-service.service';
+import { Course } from '../course';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,31 +10,31 @@ import {Course} from '../course';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-nameField;
-descripcionField;
-maxAlumnosField;
-horasField;
-precioField;
-plazasField;
-course: Course;
+  nameField;
+  descripcionField;
+  maxAlumnosField;
+  horasField;
+  precioField;
+  plazasField;
+  course: Course;
 
-constructor(private coursesService: CoursesServiceService) { }
+  constructor(private coursesService: CoursesServiceService,private router: Router) { }
 
- 
+
   onSubmit(form) {
- this.course=new Course(this.nameField,this.descripcionField,this.maxAlumnosField,this.horasField,this.precioField,this.plazasField);
-    this.coursesService.createCourse(this.course).subscribe(response => this.onSuccess(response), error =>  this.onError (error), () => this.onCompletion());
-    
+    this.course = new Course(this.nameField, this.descripcionField, this.maxAlumnosField, this.horasField, this.precioField, this.plazasField);
+    this.coursesService.createCourse(this.course).subscribe(response => this.onSuccess(response), error => this.onError(error), () => this.onCompletion());
     console.log("Submit");
   }
-  onError(response){
-console.log("Error"+response);
+  onError(response) {
+    alert("No se ha podido dar de alta el curso, por favor intentalo más tarde.");
+    console.log("Error" + response);
   }
-  onCompletion(){
-console.log("Completion");
+  onCompletion() {
+    console.log("Completion");
   }
-  onSuccess(response){
-    alert("El curso se ha dado de alta");
+  onSuccess(response) {
+    this.router.navigateByUrl('courses');
   }
   ngOnInit() {
   }

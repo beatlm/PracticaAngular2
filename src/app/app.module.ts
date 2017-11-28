@@ -6,17 +6,19 @@ import { CourseComponent } from './course/course.component';
 import { ListComponent } from './list/list.component';
 import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
-import {RouterModule, Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
-import{CoursesServiceService} from'./courses-service.service';
-import {HttpModule, Http} from '@angular/http';
+import { CoursesServiceService } from './courses-service.service';
+import { HttpModule, Http } from '@angular/http';
 
 
-const appRoutes: Routes = [ 
-  {path: 'add-course', component: CreateComponent}, 
-  {path: 'courses', component: ListComponent},
-  {path: 'courses/detail', component: CourseDetailComponent}
- ]; 
+
+const appRoutes: Routes = [
+  { path: 'add-course', component: CreateComponent },
+  { path: 'courses', component: ListComponent },
+  { path: 'courses/detail/:id', component: CourseDetailComponent },
+
+];
 
 @NgModule({
   declarations: [
@@ -35,8 +37,8 @@ const appRoutes: Routes = [
   providers: [CoursesServiceService],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 
-  
-  
+
+
 }

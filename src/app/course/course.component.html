@@ -1,6 +1,7 @@
 <router-outlet></router-outlet>
 <div> 
-    <a [routerLink]="['detail',course]" routerLinkActive="active">Detalle</a>
+    <a [routerLink]="['detail',course.id]"  routerLinkActive="active">Detalle</a>
   <h3>{{course.name}}</h3>
   <p>{{course.descripcion}}</p>
+  <button (click)="delete()">Borrar</button>
 </div>

@@ -7,6 +7,6 @@ import {Course} from './course';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- title = 'Cursos a go-gó';
+ title = 'Cursos CRUD';
  
 }
