@@ -9,35 +9,30 @@ import { CoursesServiceService } from '../courses-service.service';
 })
 export class CourseDetailComponent implements OnInit {
 
-  @Input() mycourse: Course;
-  id;
 
+  id;
+  mycourse:Course;
 
   constructor(private route: ActivatedRoute, private coursesService: CoursesServiceService, ) {
     route.params.subscribe(params => {
       this.id = params['id'];
-    });
-    this.coursesService.getCourse(this.id).subscribe(response => this.onSuccess(response), error => this.onError(error), () => this.onCompletion());
-    
+    }); 
   }
 
-
   ngOnInit() {
-
-    //this.coursesService.getCourse(this.id).subscribe(response => this.onSuccess(response), error => this.onError(error), () => this.onCompletion());
+console.log(this.id);
+    this.coursesService.getCourse(this.id).subscribe(response => this.onSuccess(response), error => this.onError(error), () => this.onCompletion());
   }
   onError(response) {
     alert("No se ha podido cargar la información del curso. Intentalo más tarde.");
     console.log("Error" + response);
   }
   onCompletion() {
-    console.log('compldgd');
+    console.log('completion');
   }
   onSuccess(response) {
-    console.log('success');
-    this.mycourse = response._body;
-    console.log(`curso` + this.mycourse);
-    //  alert(this.mycourse.name);
+    console.log('success:');
+    this.mycourse=response.json();
   }
 
 }

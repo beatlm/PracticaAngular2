@@ -16,7 +16,7 @@ import { HttpModule, Http } from '@angular/http';
 const appRoutes: Routes = [
   { path: 'add-course', component: CreateComponent },
   { path: 'courses', component: ListComponent },
-  { path: 'courses/detail/:id', component: CourseDetailComponent },
+  { path: 'detail/:id', component: CourseDetailComponent },
 
 ];
 

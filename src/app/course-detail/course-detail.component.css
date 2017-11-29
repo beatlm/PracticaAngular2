@@ -1,0 +1,13 @@
+.content{
+    
+    padding-top: 5px;
+    margin-left: 18px;
+   
+}
+p{
+    font-size: medium;
+    margin-left: 30px;
+    font-weight: normal;
+    color:#615e5e;
+    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
