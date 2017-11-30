@@ -1,7 +1,12 @@
 <div class="container">
 <h2>Aquí tienes el listado de tus cursos: </h2>
 <ul>
- 
+ <form >
+   <label>Buscar</label>
+   <br/>
+   <input [formControl]="searchForm" type="text" size="50"   required maxlength="50" />
+   <br/>
+  </form>
   <app-course *ngFor="let course of courses" (courseDeleted)="refresh($event)"
   [course]="course">
   
