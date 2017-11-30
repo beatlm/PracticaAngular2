@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Course } from '../course';
 import { CoursesServiceService } from '../courses-service.service';
 import { ListComponent } from '../list/list.component';
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class CourseComponent implements OnInit {
 
-
+  @Output() courseDeleted = new EventEmitter();
   @Input() course: Course;
   constructor(private coursesService: CoursesServiceService, private listado: ListComponent, private route: Router) {
   }
@@ -35,20 +35,7 @@ export class CourseComponent implements OnInit {
   }
   onSuccess(response) {
     console.log("success delete");
-    this.coursesService.getAllCursos()
-      .subscribe(response => this.onSuccessList(response), error => this.onErrorList(error), () => this.onCompletionList());
-
+      this.courseDeleted.emit( );
   }
-  onErrorList(response) {
-    alert("No se ha podido recargar la lista. Intentalo de nuevo más tarde.")
-    console.log("Error Listado");
-  }
-  onCompletionList() {
-    console.log("Completion listado");
-  }
-  onSuccessList(response) {
-    this.listado.courses = response;
-    console.log("Success listado");
-  }
-
+  
 }

@@ -12,8 +12,11 @@ export class ListComponent implements OnInit {
   constructor(private coursesService: CoursesServiceService) { }
 
   ngOnInit() {
+ this.refresh();
+  }
+  refresh(){
     this.coursesService.getAllCursos()
-      .subscribe(response => this.onSuccess(response), error => this.onError(error), () => this.onCompletion());
+    .subscribe(response => this.onSuccess(response), error => this.onError(error), () => this.onCompletion());
 
   }
   onSuccess(response: Array<any>) {
